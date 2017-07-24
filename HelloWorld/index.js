@@ -5,17 +5,20 @@ var mHttp = require("http");
 
 // variables
 var iPort = 8081;
+var sMessage="Hello World!"
 
 //create Http Server
 var oServer = mHttp.createServer(function(req, res){
-console.log("Request received");
+    console.log("Request received");
 
-// Content Type: text/plain
-res.writeHead(200, {'Content-Type': 'text/plain'});
-// Send the response body as "Hello World"
-res.end('Hello World\n');
+    // Content Type: text/plain
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.write(sMessage);
 
-console.log("Response sent!");
+    // Send the response body as "Hello World"
+    res.end();
+
+    console.log("Response sent!");
 });
 oServer.listen(iPort);
 
