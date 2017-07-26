@@ -3,6 +3,20 @@ const express = require('express');
 const mongo = require('mongodb');
 const uuid = require('uuid/v4');
 
+var mProducts = require('./modules/products');
+mProducts.config.mongoClient=mongoClient;
+mProducts.config.mongoURL = mongoURL;
+
+var mOrders = require('./modules/orders');
+mOrders.config.mongoClient=mongoClient;
+mOrders.config.mongoURL = mongoURL;
+
+var MongoClient = mongo.MongoClient;
+var mongoURL = "mongodb://<dbuser>:<dbpassword>@ds123933.mlab.com:23933/trainingnodejs";
+
+
+
+
 const app = express();
 
 //products related request
@@ -19,6 +33,10 @@ const app = express();
 
     //get list
     app.get("/products", function (req, res) {
+
+        var products=mProducts.listProducts();
+        res.writeHead(200, {'Content-type':'application/json'});
+
         res.end();
     });
 
