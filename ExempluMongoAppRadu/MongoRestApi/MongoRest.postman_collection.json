@@ -1,0 +1,45 @@
+{
+	"id": "ddae022c-009d-202f-2e31-ded7330d82ef",
+	"name": "MongoRest",
+	"description": "",
+	"order": [
+		"49977f0b-7998-1847-6625-b39eb83718f4"
+	],
+	"folders": [],
+	"timestamp": 1501060464863,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "49977f0b-7998-1847-6625-b39eb83718f4",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/products",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "ddae022c-009d-202f-2e31-ded7330d82ef",
+			"data": [],
+			"dataMode": "raw",
+			"name": "PUT Product",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1501060480236,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"id\":\"\",\"name\":\"Product 2\"}"
+		}
+	]
+}

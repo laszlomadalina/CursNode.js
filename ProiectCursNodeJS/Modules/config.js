@@ -1,0 +1,1 @@
+exports.mongoUrl = module.exports.mongoUrl = "mongodb://user:userpass@ds123933.mlab.com:23933/trainingnodejs";
